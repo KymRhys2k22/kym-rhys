@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { smoothScroll } from "../utils/smoothControls";
 
-function Navbar() {
+const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -141,4 +141,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
