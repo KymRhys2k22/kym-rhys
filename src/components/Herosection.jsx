@@ -7,7 +7,7 @@ const HeroSection = () => {
         <div className="flex flex-col-reverse   md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-start">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 font-lexend">
-              Kym Rhys
+              Kym Rhys {"\n"} Mallari
             </h1>
             <p className="text-xl md:text-2xl mb-6">
               Front-End & Mobile Developer
