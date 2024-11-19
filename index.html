@@ -1,21 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/k.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      property="og:url"
-      content="https://kymrhys2k22.github.io/portfolio-kym-rhys/"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Kym Rhys Portfolio" />
-    <meta property="og:description" content="Under Construction" />
-    <meta property="og:image" content="https://svgsilh.com/svg/2051703.svg" />
-    <title>Kym Rhys Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Kym Rhys - Web Developer Portfolio | Front-End & Mobile Development
+        </title>
+        <meta
+            name="description"
+            content="Explore Kym Rhys's web development portfolio showcasing expertise in front-end and mobile development. View projects, skills, and contact information."
+        />
+        <link
+            rel="canonical"
+            href="https://kymrhys2k22.github.io/portfolio-kym-rhys/"
+        />
+        <link rel="icon" type="image/svg+xml" href="/k.svg" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://kymrhys2k22.github.io/portfolio-kym-rhys/"
+        />
+        <meta
+            property="og:title"
+            content="Kym Rhys - Web Developer Portfolio"
+        />
+        <meta
+            property="og:description"
+            content="Explore Kym Rhys's web development projects and skills in front-end and mobile development."
+        />
+        <meta
+            property="og:image"
+            content="https://kymrhys2k22.github.io/portfolio-kym-rhys/og-image.jpg"
+        />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+            property="twitter:url"
+            content="https://kymrhys2k22.github.io/portfolio-kym-rhys/"
+        />
+        <meta
+            property="twitter:title"
+            content="Kym Rhys - Web Developer Portfolio"
+        />
+        <meta
+            property="twitter:description"
+            content="Explore Kym Rhys's web development projects and skills in front-end and mobile development."
+        />
+        <meta
+            property="twitter:image"
+            content="https://kymrhys2k22.github.io/portfolio-kym-rhys/og-image.jpg"
+        />
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Kym Rhys",
+                "url": "https://kymrhys2k22.github.io/portfolio-kym-rhys/",
+                "sameAs": [
+                    "https://github.com/kymrhys2k22",
+                    "https://linkedin.com/in/kymrhys"
+                ],
+                "jobTitle": "Web Developer",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Freelance"
+                },
+                "description": "Front-end and mobile developer specializing in creating responsive and user-friendly web applications."
+            }
+        </script>
+
+        <link rel="stylesheet" href="/src/index.css" />
+        <meta name="theme-color" content="#4a5568" />
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/src/main.jsx"></script>
+
+        <!-- Preload critical assets -->
+        <link rel="preload" href="/src/index.css" as="style" />
+        <link rel="preload" href="/src/main.jsx" as="script" />
+
+        <!-- Add reference to sitemap -->
+        <link
+            rel="sitemap"
+            type="application/xml"
+            title="Sitemap"
+            href="/sitemap.xml"
+        />
+    </body>
 </html>
