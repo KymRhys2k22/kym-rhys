@@ -8,7 +8,7 @@ import ContactSection from "./components/ContactSection";
 import LoadingSpinner from "./components/LoadingSpinner";
 import NavBar from "./components/NavBar";
 
-function App() {
+const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
