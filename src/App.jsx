@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
-import HeroSection from "./components/HeroSection";
-import ProjectsSection from "./components/ProjectsSection";
-import SkillsSection from "./components/SkillsSection";
-import AboutSection from "./components/AboutSection";
-import ContactSection from "./components/ContactSection";
-import LoadingSpinner from "./components/LoadingSpinner";
+import HeroSection from "./components/HeroSection.jsx/";
+import ProjectsSection from "./components/ProjectsSection.jsx";
+import SkillsSection from "./components/SkillsSection.jsx";
+import AboutSection from "./components/AboutSection.jsx";
+import ContactSection from "./components/ContactSection.jsx";
+import LoadingSpinner from "./components/LoadingSpinner.jsx";
 import NavBar from "./components/NavBar";
 
 const App = () => {
@@ -46,6 +46,6 @@ const App = () => {
       </main>
     </div>
   );
-}
+};
 
 export default App;
