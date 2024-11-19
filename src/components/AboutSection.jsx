@@ -6,8 +6,8 @@ function AboutSection() {
           <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
           <div className="bg-white p-8 rounded-lg shadow-md">
             <p className="mb-4">
-              Hi, I'm Jane Doe, a passionate front-end and mobile developer with
-              over 5 years of experience in creating beautiful, responsive, and
+              Hi, I'm Kym Rhys Mallari, a passionate front-end and mobile developer with
+              over 2 years of experience in creating beautiful, responsive, and
               user-friendly applications. My journey in tech started with a
               fascination for how digital products can impact people's lives,
               and it has evolved into a career dedicated to crafting exceptional

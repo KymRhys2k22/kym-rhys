@@ -10,7 +10,7 @@ const Hero = () => {
                             Kym Rhys {"\n"} Mallari
                         </h1>
                         <p className="text-xl md:text-2xl mb-6">
-                            Front-End & Mobile Developer
+                            Front-End & Mobile Developer, Graphic Designer
                         </p>
                         <p className="text-lg md:text-xl mb-8">
                             Crafting beautiful, responsive, and user-friendly digital

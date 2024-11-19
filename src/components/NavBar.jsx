@@ -9,12 +9,12 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md z-10 fixed w-full">
+    <nav className="bg-white shadow-md z-10 fixed w-full backdrop-filter backdrop-blur-lg bg-opacity-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-gray-800">Kym Rhys</span>
+              <span className="text-xl font-bold text-gray-800">Kym Rhys Mallari</span>
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
