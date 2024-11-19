@@ -19,8 +19,8 @@ function ContactSection() {
   };
 
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
+    <section className="py-20" id="contact">
+      <div className="container mx-auto px-4 max-w-5xl">
         <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
@@ -93,7 +93,7 @@ function ContactSection() {
               <TfiEmail size={20} />
               <a
                 href={
-                  "mailto:example@example.com?subject=Hello%20there&body=This%20is%20a%20predefined%20email%20body."
+                  "mailto:kymrhys@gmail.com?subject=Hello%20there&body=This%20is%20a%20predefined%20email%20body."
                 }
               >
                 kymrhys@gmail.com

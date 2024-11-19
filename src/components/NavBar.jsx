@@ -10,7 +10,7 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white shadow-md z-10 fixed w-full backdrop-filter backdrop-blur-lg bg-opacity-30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
@@ -21,35 +21,35 @@ const NavBar = () => {
             <a
               onClick={smoothScroll}
               href="#home"
-              className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              className="border-transparent  text-gray-800 hover:border-indigo-800 focus:text-indigo-700 hover:text-indigo-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
             >
               Home
             </a>
             <a
               href="#projects"
               onClick={smoothScroll}
-              className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              className="border-transparent  text-gray-800 hover:border-indigo-800 focus:text-indigo-700 hover:text-indigo-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
             >
               Projects
             </a>
             <a
               onClick={smoothScroll}
               href="#skills"
-              className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              className="border-transparent  text-gray-800 hover:border-indigo-800 focus:text-indigo-700 hover:text-indigo-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
             >
               Skills
             </a>
             <a
               onClick={smoothScroll}
               href="#about"
-              className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              className="border-transparent  text-gray-800 hover:border-indigo-800 focus:text-indigo-700 hover:text-indigo-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
             >
               About
             </a>
             <a
               onClick={smoothScroll}
               href="#contact"
-              className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              className="border-transparent  text-gray-800 hover:border-indigo-800 focus:text-indigo-700 hover:text-indigo-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
             >
               Contact
             </a>
@@ -58,7 +58,7 @@ const NavBar = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-text-indigo-700"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -106,31 +106,31 @@ const NavBar = () => {
           <div className="pt-2 pb-3 space-y-1">
             <a
               href="#home"
-              className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              className="border-transparent  text-gray-800 hover:bg-gray-50 hover:bfocusindigo-800 active:text-indigo-700 hover:text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
             >
               Home
             </a>
             <a
               href="#projects"
-              className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              className="border-transparent  text-gray-800 hover:bg-gray-50 hover:bfocusindigo-800 active:text-indigo-700 hover:text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
             >
               Projects
             </a>
             <a
               href="#skills"
-              className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              className="border-transparent  text-gray-800 hover:bg-gray-50 hover:bfocusindigo-800 active:text-indigo-700 hover:text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
             >
               Skills
             </a>
             <a
               href="#about"
-              className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              className="border-transparent  text-gray-800 hover:bg-gray-50 hover:bfocusindigo-800 active:text-indigo-700 hover:text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
             >
               About
             </a>
             <a
               href="#contact"
-              className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              className="border-transparent  text-gray-800 hover:bg-gray-50 hover:bfocusindigo-800 active:text-indigo-700 hover:text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
             >
               Contact
             </a>

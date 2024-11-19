@@ -10,6 +10,7 @@ import NavBar from "./components/NavBar";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  //!const doc_ready = window.document.readyState
 
   useEffect(() => {
     // Simulate loading time
@@ -20,6 +21,23 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+
+
+
+  /* useEffect(() => {
+    if (doc_ready === 'complete') {
+      setIsLoading(false);
+      if (doc_ready !== 'interactive') {
+        setIsLoading(false)
+      } else {
+        setIsLoading(true);
+        setIsLoading(true)
+      }
+    }
+  }, [doc_ready]); */
+
+
+
   if (isLoading) {
     return <LoadingSpinner />;
   }
@@ -28,21 +46,11 @@ const App = () => {
     <div className="min-h-screen bg-gray-50 ">
       <NavBar />
       <main>
-        <section id="home">
-          <Hero />
-        </section>
-        <section id="projects">
-          <ProjectsSection />
-        </section>
-        <section id="skills">
-          <SkillsSection />
-        </section>
-        <section id="about">
-          <AboutSection />
-        </section>
-        <section id="contact">
-          <ContactSection />
-        </section>
+        <Hero />
+        <ProjectsSection />
+        <SkillsSection />
+        <AboutSection />
+        <ContactSection />
       </main>
     </div>
   );
