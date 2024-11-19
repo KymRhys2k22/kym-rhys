@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import HeroSection from "./components/HeroSection";
+import Hero from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
 import AboutSection from "./components/AboutSection";
@@ -29,7 +29,7 @@ const App = () => {
       <NavBar />
       <main>
         <section id="home">
-          <HeroSection />
+          <Hero />
         </section>
         <section id="projects">
           <ProjectsSection />
