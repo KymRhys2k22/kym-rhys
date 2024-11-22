@@ -29,7 +29,7 @@ const Hero = () => {
                     <div className="md:w-1/2 flex justify-center md:justify-end">
                         <Suspense fallback={<div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500"></div>}>
                             <img
-                                src={"https://avatars.githubusercontent.com/u/107522146?s=400&u=772a79f3bb75e6bf60ff704f8a915d48c57aed1e&v=4"}
+                                src={"https://raw.githubusercontent.com/KymRhys2k22/kym-rhys/refs/heads/main/src/assets/Profile.png"}
                                 alt="Kym Rhys"
                                 className="rounded-full  w-64 h-64 object-cover border-4 border-white shadow-xl"
                             />
