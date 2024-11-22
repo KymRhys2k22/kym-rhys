@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kymrhys2k22.github.io/kym-rhys/sitemap.xml
