@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
+
 
 const navItems = [
   { id: 'home', label: 'Home' },
@@ -21,10 +22,10 @@ function NavBar() {
 
       if (currentScrollY > lastScrollY) {
         // Scrolling down
-        controls.start({ y: '-100%', transition: { duration: 0.3 } })
+        controls.start({ y: '-100%', opacity: -1, transition: { duration: 0.3 } })
       } else {
         // Scrolling up
-        controls.start({ y: 0, transition: { duration: 0.3 } })
+        controls.start({ y: 0, opacity: 1, transition: { duration: 0.3 } })
       }
 
       setLastScrollY(currentScrollY)

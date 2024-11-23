@@ -1,40 +1,43 @@
+import Marquee from "react-fast-marquee";
+import { useHover } from "@uidotdev/usehooks";
 
 
 const skills = [
-  {
-    category: "Front-end",
-    items: ["HTML", "CSS", "JavaScript", "⚛️ React", "💨 Tailwind CSS"],
-  },
-  { category: "Mobile", items: ["🚀 React Native"] },
-  { category: "Back-end", items: ["Node.js", "Express", "Python", "🐍 Django"] },
-  { category: "Database", items: ["MongoDB", "PostgreSQL", "Firebase"] },
-  { category: "Tools", items: ["📚 Git", "Webpack", "Docker", "Jest"] },
+  "React-Dark",
+  "JavaScript",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "Python-Dark",
+  "Vite-Dark",
+  "Django",
+  "Figma-Dark",
+  "Github-Dark",
+  "TailwindCSS-Dark",
 ];
 
 function SkillsSection() {
+  const [ref, hovering] = useHover();
   return (
-    <section className="py-20" id="skills">
-      <div className="container max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">My Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skillSet, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">
-                {skillSet.category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skillSet.items.map((skill, i) => (
-                  <span
-                    key={i}
-                    className={`${skill === "⚛️ React" || skill === "🚀 React Native" || skill === "🐍 Django" || skill === "📚 Git" || skill == "💨 Tailwind CSS" ? "bg-indigo-600 text-white" : "bg-gray-200"} text-gray-700 px-2 py-1 rounded-md text-sm`}
-                  >
-                    {skill}
-                  </span>
-                ))}
+    <section className="py-20 bg-gray-200" id="skills">
+      <div className="container  max-w-full mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12 ">My Skills</h2>
+        <Marquee pauseOnHover={true}>
+          <div className="flex items-center justify-center  gap-8 mr-8 ">
+            {skills.map((skillSet, index) => (
+              <div key={index} className="group ">
+                <img
+
+                  src={`https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/${skillSet}.svg`}
+                  alt={`Skill ${index + 1}`}
+                  className="md:w-32 w-24 hover:scale-110 drop-shadow-lg
+                    p-2 transition duration-300"
+                />
+                <span className="absolute bottom-24 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100 ">{skillSet}</span>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Marquee>
       </div>
     </section>
   );

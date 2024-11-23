@@ -18,10 +18,10 @@ const Hero = () => {
                             experiences
                         </p>
                         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                            <button className="bg-white text-indigo-600 hover:bg-transparent hover:text-white hover:border-white hover:bg-indigo-600 border px-6 py-2 rounded-md transition duration-300">
+                            <button className="bg-white md:text-sm text-indigo-600 hover:bg-transparent hover:text-white hover:border-white hover:bg-indigo-600 border px-6 py-2 rounded-md transition duration-300">
                                 View My Work
                             </button>
-                            <button className="border border-white text-white hover:bg-white hover:text-purple-600 px-6 py-2 rounded-md transition duration-300">
+                            <button className="border border-white md:text-sm text-white hover:bg-white hover:text-purple-600 px-6 py-2 rounded-md transition duration-300">
                                 Download Resume
                             </button>
                         </div>
@@ -31,7 +31,7 @@ const Hero = () => {
                             <img
                                 src={"https://raw.githubusercontent.com/KymRhys2k22/kym-rhys/refs/heads/main/src/assets/Profile.png"}
                                 alt="Kym Rhys"
-                                className="rounded-full  w-64 h-64 object-cover border-4 border-white shadow-xl"
+                                className="rounded-full mb-12 md:mb-0 lg:w-96 lg:h-96 md:h-72 md:w-72  w-64 h-64 object-cover border-4 border-white shadow-xl"
                             />
                         </Suspense >
                     </div>

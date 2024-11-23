@@ -18,6 +18,7 @@ const projects = [
     liveLink: "https://appstore.com",
     githubLink: "https://github.com",
   },
+
   // Add more projects as needed
 ];
 
