@@ -21,8 +21,9 @@ const Hero = () => {
                             <button className="bg-white md:text-sm text-indigo-600 hover:bg-transparent hover:text-white hover:border-white hover:bg-indigo-600 border px-6 py-2 rounded-md transition duration-300">
                                 View My Work
                             </button>
-                            <button className="border border-white md:text-sm text-white hover:bg-white hover:text-purple-600 px-6 py-2 rounded-md transition duration-300">
-                                Download Resume
+                            <button className="group tooltip-container border-2  hover:border-white px-6 py-2 text-indigo-600">
+                                <span className="tooltip text-xs animate-bounce">HIRE ME😭</span>
+                                <span className="text group-hover:text-white">Download Resume</span>
                             </button>
                         </div>
                     </div>

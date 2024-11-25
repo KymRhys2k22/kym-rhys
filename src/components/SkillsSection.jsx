@@ -1,23 +1,23 @@
 import Marquee from "react-fast-marquee";
-import { useHover } from "@uidotdev/usehooks";
+
 
 
 const skills = [
-  "React-Dark",
-  "JavaScript",
-  "TypeScript",
-  "HTML",
-  "CSS",
-  "Python-Dark",
-  "Vite-Dark",
-  "Django",
-  "Figma-Dark",
-  "Github-Dark",
-  "TailwindCSS-Dark",
+  { link: "React-Dark", linkName: "React" },
+  { link: "JavaScript", linkName: "JavaScript" },
+  { link: "TypeScript", linkName: "TypeScript" },
+  { link: "HTML", linkName: "HTML" },
+  { link: "CSS", linkName: "CSS" },
+  { link: "Python-Dark", linkName: "Python" },
+  { link: "Vite-Dark", linkName: "Vite" },
+  { link: "Django", linkName: "Django" },
+  { link: "Figma-Dark", linkName: "Figma" },
+  { link: "Github-Dark", linkName: "Github" },
+  { link: "TailwindCSS-Dark", linkName: "TailwindCSS" },
 ];
 
 function SkillsSection() {
-  const [ref, hovering] = useHover();
+
   return (
     <section className="py-20 bg-gray-200" id="skills">
       <div className="container  max-w-full mx-auto">
@@ -28,12 +28,12 @@ function SkillsSection() {
               <div key={index} className="group ">
                 <img
 
-                  src={`https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/${skillSet}.svg`}
+                  src={`https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/${skillSet.link}.svg`}
                   alt={`Skill ${index + 1}`}
                   className="md:w-32 w-24 hover:scale-110 drop-shadow-lg
                     p-2 transition duration-300"
                 />
-                <span className="absolute bottom-24 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100 ">{skillSet}</span>
+                <span className="absolute bottom-24 scale-0 transition-all rounded bg-red-500 p-2 text-xs text-white group-hover:scale-100 ">{skillSet.linkName}</span>
               </div>
             ))}
           </div>

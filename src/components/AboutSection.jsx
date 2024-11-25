@@ -2,7 +2,7 @@ function AboutSection() {
   return (
     <section className="py-20 bg-gray-100" id="about">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
+        <article className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
           <div className="bg-white p-8 rounded-lg shadow-md">
             <p className="mb-4">
@@ -39,7 +39,7 @@ function AboutSection() {
               opportunities to grow both as a developer and as a person.
             </p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   );

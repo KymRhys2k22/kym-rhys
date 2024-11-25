@@ -12,11 +12,30 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   //!const doc_ready = window.document.readyState
 
+  // This will run one time after the component mounts
+  /* useEffect(() => {
+    // callback function to call when event triggers
+    const onPageLoad = () => {
+      console.log('page loaded');
+      setIsLoading(false);
+      // do something else
+    };
+
+    // Check if the page has already loaded
+    if (document.readyState === 'complete') {
+      onPageLoad();
+    } else {
+      window.addEventListener('load', onPageLoad, false);
+      // Remove the event listener when component unmounts
+      return () => window.removeEventListener('load', onPageLoad);
+    }
+  }, []); */
+
   useEffect(() => {
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // 2 seconds loading time
+    }, 3000); // 2 seconds loading time
 
     return () => clearTimeout(timer);
   }, []);
@@ -44,6 +63,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 ">
+
       <NavBar />
       <main>
         <Hero />
