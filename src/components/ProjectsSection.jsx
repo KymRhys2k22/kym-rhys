@@ -1,4 +1,4 @@
-
+import { motion as m } from "framer-motion";
 const projects = [
   {
     title: "E-commerce Platform",
@@ -24,14 +24,17 @@ const projects = [
 
 function ProjectsSection() {
   return (
-    <section className="py-20 bg-gray-100" id="projects">
+    <section className="py-20 bg-gray-100 dark:bg-slate-600 z-10" id="projects">
       <div className="container mx-auto max-w-5xl px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">My Projects</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <m.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2, ease: "linear" }}
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden"
             >
               <img
                 src={project.image}
@@ -39,8 +42,8 @@ function ProjectsSection() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <h3 className="text-xl font-semibold dark:text-slate-200 mb-2">{project.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.techStack.map((tech, i) => (
                     <span
@@ -70,7 +73,7 @@ function ProjectsSection() {
                   </a>
                 </div>
               </div>
-            </div>
+            </m.div>
           ))}
         </div>
       </div>
