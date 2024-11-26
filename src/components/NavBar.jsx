@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion'
 import DarkModeButton from './DarkModeButton'
 
 
+
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'projects', label: 'Projects' },
@@ -16,6 +17,9 @@ function NavBar({ darkMode, setDarkMode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
   const controls = useAnimation()
+
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +83,7 @@ function NavBar({ darkMode, setDarkMode }) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex-shrink-0 flex items-center">
-              <h2 className="text-xl dark:text-white font-bold text-indigo-400 underline italic">KymRhysDev.</h2>
+              <h2 className="text-xl dark:text-white font-bold text-zinc-700 underline italic">KymRhysDev.</h2>
             </div>
             <div className="hidden sm:ml-6  sm:flex sm:space-x-8">
 
@@ -131,6 +135,7 @@ function NavBar({ darkMode, setDarkMode }) {
           transition={{ duration: 0.4, ease: 'easeInOut' }}
         >
           <div className="pt-2 pb-3 space-y-1">
+
             {navItems.map(({ id, label }) => (
               <a
                 key={id}
@@ -147,6 +152,7 @@ function NavBar({ darkMode, setDarkMode }) {
                 {label}
               </a>
             ))}
+            <div className='flex justify-end pr-4'> <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode} /></div>
           </div>
         </motion.div>
       </motion.nav>

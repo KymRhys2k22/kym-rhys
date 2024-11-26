@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import Hero from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
@@ -9,9 +8,11 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import NavBar from "./components/NavBar";
 import Aside from "./components/Aside";
 
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false)
+
   //!const doc_ready = window.document.readyState
 
   // This will run one time after the component mounts
@@ -42,9 +43,7 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    console.log('dark', darkMode);
-  }, [darkMode]);
+
 
 
 
@@ -70,8 +69,7 @@ const App = () => {
 
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${darkMode ? 'dark' : ''} `}>
-
+    <div className={`min-h-screen   bg-gray-950 overflow-x-hidden ${darkMode ? 'dark' : ''} `}>
       <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
       <Aside />
       <main>

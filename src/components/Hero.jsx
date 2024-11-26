@@ -3,64 +3,58 @@ import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 
 import { motion as m } from "framer-motion";
-import Marquee from "react-fast-marquee";
+
 
 
 const Hero = ({ darkMode }) => {
     return (
-        <section className="group  bg-gradient-to-b from-blue-500 dark:from-slate-600 dark:to-slate-900  to-blue-300 text-white py-20 " id='home'>
-            <div
-                className="container max-w-5xl mx-auto px-4 pt-8 sm:px-6 lg:px-8">
-
-
-
-
-
+        <section className="group  bg-gradient-to-b overflow-hidden from-blue-500 dark:from-slate-600 dark:to-slate-900  to-blue-300 text-white py-20 " id='home'>
+            <div className="container max-w-5xl mx-auto px-4 pt-8 sm:px-6 lg:px-8">
                 <div className="flex flex-col-reverse   md:flex-row items-center justify-between">
-                    <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-start">
+                    <div className="md:w-1/2 mb-8 md:mb-0 text-center z-40 md:text-start">
                         <m.h1
-                            initial={{ opacity: 0, y: 10 }}
+                            initial={{ opacity: -1, y: 10 }}
                             transition={{ duration: 1, delay: 0.7, ease: "easeInOut" }}
                             whileInView={{ opacity: 1, y: 0 }}
 
-                            className="text-4xl md:text-6xl font-extrabold mb-4 dark:text-indigo-200 text-slate-800 z-40">
+                            className="text-4xl md:text-6xl font-extrabold mb-4 dark:text-indigo-200 text-slate-800">
                             Kym Rhys {"\n"} Mallari
                         </m.h1>
                         <m.h3
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: -1, y: 50 }}
                             transition={{ duration: 1, delay: 0.6, ease: "easeInOut" }}
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-xl md:text-2xl mb-6 dark:text-slate-100 text-slate-600">
                             Front-End & Mobile Developer, Graphic Designer
                         </m.h3>
                         <m.p
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: -1, y: 50 }}
                             transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-lg md:text-xl mb-8 dark:text-slate-50 text-slate-700">
                             Crafting beautiful, responsive, and user-friendly digital
                             experiences
                         </m.p>
-                        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 z-40 sm:space-x-4">
                             <m.button
                                 initial={{ opacity: 0 }}
                                 transition={{ duration: 1, delay: 0.4, ease: "linear" }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                className="bg-white md:text-sm text-indigo-600 hover:bg-transparent hover:text-white hover:border-white hover:bg-indigo-600 border px-6 py-2 rounded-md transition duration-300 z-40">
+                                className="bg-white md:text-sm text-indigo-600 hover:bg-transparent hover:text-white hover:border-white hover:bg-indigo-600 border px-6 py-2 rounded-md transition duration-300 ">
                                 View My Work
                             </m.button>
                             <m.button
                                 initial={{ opacity: 0 }}
                                 transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                className="z-40 tooltip-container border-2 transition duration-200 ease-in-out hover:border-white px-6 py-2 text-indigo-600">
+                                className=" tooltip-container border-2 transition duration-200 ease-in-out hover:border-white px-6 py-2 text-indigo-600">
                                 <span className="tooltip text-xs animate-bounce">HIRE ME😭</span>
                                 <span className="text hover:text-white">Download Resume</span>
                             </m.button>
                         </div>
                     </div>
                     <m.div
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: -1, y: 50 }}
                         transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
                         whileInView={{ opacity: 1, y: 0 }}
                         className="md:w-1/2 flex justify-center md:justify-end">
@@ -72,7 +66,7 @@ const Hero = ({ darkMode }) => {
                         />
 
                     </m.div>
-                    <div className=" duration-500 group-hover:scale-105 overflow-hidden absolute h-[570px]   z-0 top-0 left-0 right-0 bottom-0">
+                    <div className=" duration-500 h-[835px]  md:h-[450px] group-hover:scale-105 overflow-hidden absolute lg:h-[570px] w-screen   z-0 top-0 left-0 right-0 bottom-0">
                         {darkMode ? (<Canvas >
                             <Stars radius={30} depth={10} count={5000} factor={4} saturation={100} fade speed={1} />
                         </Canvas>)

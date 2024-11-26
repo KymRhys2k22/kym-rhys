@@ -19,8 +19,8 @@ function ContactSection() {
   };
 
   return (
-    <footer className="py-20" id="contact">
-      <div className="container mx-auto px-4 max-w-5xl">
+    <footer className="py-20  bg-white dark:bg-slate-800" id="contact">
+      <div className="container dark:text-slate-50 mx-auto px-4 max-w-5xl">
         <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
@@ -28,7 +28,7 @@ function ContactSection() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block mb-2 text-sm font-medium text-gray-700"
+                  className="block mb-2 text-sm font-medium text-gray-700 dark:text-slate-50"
                 >
                   Your Name
                 </label>
@@ -45,7 +45,7 @@ function ContactSection() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-700"
+                  className="block mb-2 text-sm font-medium text-gray-700 dark:text-slate-50"
                 >
                   Your Email
                 </label>
@@ -59,10 +59,10 @@ function ContactSection() {
                   required
                 />
               </div>
-              <div>
+              <div >
                 <label
                   htmlFor="message"
-                  className="block mb-2 text-sm font-medium text-gray-700"
+                  className="block mb-2 text-sm dark:text-slate-50  font-medium text-gray-700"
                 >
                   Your Message
                 </label>
@@ -86,7 +86,7 @@ function ContactSection() {
           </div>
           <div className="space-y-4">
             <p className="text-lg">
-              I'm always open to new opportunities and collaborations. Feel free
+              I&apos;m always open to new opportunities and collaborations. Feel free
               to reach out!
             </p>
             <div className="flex items-center space-x-4 ">
@@ -95,6 +95,8 @@ function ContactSection() {
                 href={
                   "mailto:kymrhys@gmail.com?subject=Hello%20there&body=This%20is%20a%20predefined%20email%20body."
                 }
+                className="hover:underline text-blue-600"
+
               >
                 kymrhys@gmail.com
               </a>
