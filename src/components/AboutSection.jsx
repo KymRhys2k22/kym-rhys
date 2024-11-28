@@ -6,7 +6,7 @@ function AboutSection() {
           <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">About Me</h2>
           <div className="bg-white p-8 dark:bg-slate-800 dark:text-white rounded-lg shadow-md">
             <p className="mb-4">
-              Hi, I&apos;m Kym Rhys Mallari, a passionate front-end and mobile developer with
+              Hi, I&apos;m <strong>Kym Rhys Mallari</strong>, a passionate front-end and mobile developer with
               over 2 years of experience in creating beautiful, responsive, and
               user-friendly applications. My journey in tech started with a
               fascination for how digital products can impact people&apos;s lives,

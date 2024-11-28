@@ -14,7 +14,7 @@ const Hero = ({ darkMode }) => {
                     <div className="md:w-1/2 mb-8 md:mb-0 text-center z-40 md:text-start">
                         <m.h1
                             initial={{ opacity: -1, y: 10 }}
-                            transition={{ duration: 1, delay: 0.7, ease: "easeInOut" }}
+                            transition={{ duration: 1, delay: 0.7, ease: "anticipate" }}
                             whileInView={{ opacity: 1, y: 0 }}
 
                             className="text-4xl md:text-6xl font-extrabold mb-4 dark:text-indigo-200 text-slate-800">
@@ -28,8 +28,8 @@ const Hero = ({ darkMode }) => {
                             Front-End & Mobile Developer, Graphic Designer
                         </m.h3>
                         <m.p
-                            initial={{ opacity: -1, y: 50 }}
-                            transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+                            initial={{ opacity: 0, y: 10 }}
+                            transition={{ duration: 1, delay: 0.8, ease: "easeInOut" }}
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-lg md:text-xl mb-8 dark:text-slate-50 text-slate-700">
                             Crafting beautiful, responsive, and user-friendly digital
@@ -38,8 +38,8 @@ const Hero = ({ darkMode }) => {
                         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 z-40 sm:space-x-4">
                             <m.button
                                 initial={{ opacity: 0 }}
-                                transition={{ duration: 1, delay: 0.4, ease: "linear" }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1, delay: 0.4, ease: "easeInOut" }}
+                                whileInView={{ opacity: 1, }}
                                 className="bg-white md:text-sm text-indigo-600 hover:bg-transparent hover:text-white hover:border-white hover:bg-indigo-600 border px-6 py-2 rounded-md transition duration-300 ">
                                 View My Work
                             </m.button>
@@ -48,7 +48,7 @@ const Hero = ({ darkMode }) => {
                                 transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 className=" tooltip-container border-2 transition duration-200 ease-in-out hover:border-white px-6 py-2 text-indigo-600">
-                                <span className="tooltip text-xs animate-bounce">HIRE ME😭</span>
+                                <span className="tooltip text-xs animate-bounce">HIRE ME</span>
                                 <span className="text hover:text-white">Download Resume</span>
                             </m.button>
                         </div>
