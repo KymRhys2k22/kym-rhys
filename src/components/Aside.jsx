@@ -15,7 +15,7 @@ const Aside = () => {
             <ul className="example-2 scale-0 group-hover:scale-100  max-md:flex max-md:flex-row transition-all duration-300 ease-in-out ">
                 <li className="icon-content">
                     <a
-                        href="https://linkedin.com/"
+                        target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kymrhys/"
                         aria-label="LinkedIn"
                         data-social="linkedin"
                     >
@@ -38,7 +38,7 @@ const Aside = () => {
                     <div className="tooltip">LinkedIn</div>
                 </li>
                 <li className="icon-content">
-                    <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
+                    <a target="_blank" rel="noreferrer" href="https://www.github.com/KymRhys2k22" aria-label="GitHub" data-social="github">
                         <div className="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const Aside = () => {
                 </li>
                 <li className="icon-content">
                     <a
-                        href="https://www.instagram.com/"
+                        target="_blank" rel="noreferrer" href="https://www.instagram.com/kymrhys/"
                         aria-label="Instagram"
                         data-social="instagram"
                     >
