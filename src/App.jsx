@@ -1,15 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Hero from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
-import LoadingSpinner from "./components/LoadingSpinner";
+
 import NavBar from "./components/NavBar";
 import Aside from "./components/Aside";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
 
   //!const doc_ready = window.document.readyState
