@@ -19,7 +19,8 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.5",
     "react-icons": "^4.10.1",
-    "three": "^0.170.0"
+    "three": "^0.170.0",
+    "vite-plugin-require": "^1.2.14"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
