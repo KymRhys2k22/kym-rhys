@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kymrhys.vercel.app
+Sitemap: https://kym-rhys.vercel.app
