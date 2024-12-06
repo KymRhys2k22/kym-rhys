@@ -8,10 +8,9 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import NavBar from "./components/NavBar";
 import Aside from "./components/Aside";
 
-
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(false);
 
   //!const doc_ready = window.document.readyState
 
@@ -34,19 +33,14 @@ const App = () => {
     }
   }, []); */
 
-  useEffect(() => {
+  /* useEffect(() => {
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 3000); // 2 seconds loading time
 
     return () => clearTimeout(timer);
-  }, []);
-
-
-
-
-
+  }, []); */
 
   /* useEffect(() => {
     if (doc_ready === 'complete') {
@@ -60,16 +54,16 @@ const App = () => {
     }
   }, [doc_ready]); */
 
-
-
-  if (isLoading) {
+  /*  if (isLoading) {
     return <LoadingSpinner />;
   }
-
-
+ */
 
   return (
-    <div className={`min-h-screen   bg-gray-950 overflow-x-hidden ${darkMode ? 'dark' : ''} `}>
+    <div
+      className={`min-h-screen   bg-gray-950 overflow-x-hidden ${
+        darkMode ? "dark" : ""
+      } `}>
       <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
       <Aside />
       <main>
