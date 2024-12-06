@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <div
-      className={`min-h-screen   bg-gray-950 overflow-x-hidden ${
+      className={`min-h-screenbg-gray-950 overflow-x-hidden ${
         darkMode ? "dark" : ""
       } `}>
       <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
