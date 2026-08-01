@@ -1,13 +1,10 @@
 {
   "rewrites": [
     {
-      "source": "/api/tokenrouter/:path*",
-      "destination": "https://api.tokenrouter.com/v1/:path*"
-    },
-    {
       "source": "/(.*)",
       "destination": "/"
     }
   ]
 }
+
 

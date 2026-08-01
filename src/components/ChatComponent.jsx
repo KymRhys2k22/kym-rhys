@@ -2,7 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import agentPrompt from "./agent-prompt.md?raw";
 
 const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
-const BASE_URL = "/api/tokenrouter";
+const BASE_URL = "https://api.tokenrouter.com/v1";
+
 
 export default function ChatComponent() {
   const [input, setInput] = useState("");
