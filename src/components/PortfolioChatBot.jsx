@@ -1,13 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import agentPrompt from "./agent-prompt.md?raw";
 
-const API_KEY =
-  import.meta.env.VITE_OPENAI_API_KEY ||
-  "sk-ZYNE7WRI8MeQrTd3WW36agMxIx7cZYEET7qRvmD2e8AvQqFB";
-const BASE_URL = "https://api.tokenrouter.com/v1";
 const DEFAULT_MODEL = "moonshotai/kimi-k3-free";
-
-
 
 const SUGGESTED_QUESTIONS = [
   "🚀 Tell me about Kym's top projects",
@@ -48,12 +42,12 @@ export default function PortfolioChatBot({ onClose }) {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${BASE_URL}/chat/completions`, {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${API_KEY}`,
         },
+
         body: JSON.stringify({
           model: DEFAULT_MODEL,
           messages: [
