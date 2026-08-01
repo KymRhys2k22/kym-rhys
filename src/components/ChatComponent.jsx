@@ -1,9 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import agentPrompt from "./agent-prompt.md?raw";
 
-const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+const API_KEY = "sk-ZYNE7WRI8MeQrTd3WW36agMxIx7cZYEET7qRvmD2e8AvQqFB";
 const BASE_URL = "https://api.tokenrouter.com/v1";
-
 
 export default function ChatComponent() {
   const [input, setInput] = useState("");
@@ -34,7 +33,7 @@ export default function ChatComponent() {
     try {
       if (!API_KEY) {
         throw new Error(
-          "API Key missing. Make sure VITE_OPENAI_API_KEY is set in Vercel Environment Variables and redeployed."
+          "API Key missing. Make sure VITE_OPENAI_API_KEY is set in Vercel Environment Variables and redeployed.",
         );
       }
 
