@@ -4,8 +4,9 @@ import agentPrompt from "./agent-prompt.md?raw";
 const API_KEY =
   import.meta.env.VITE_OPENAI_API_KEY ||
   "sk-ZYNE7WRI8MeQrTd3WW36agMxIx7cZYEET7qRvmD2e8AvQqFB";
-const BASE_URL = "https://api.tokenrouter.com/v1";
+const BASE_URL = "/api/tokenrouter";
 const DEFAULT_MODEL = "moonshotai/kimi-k3-free";
+
 
 const SUGGESTED_QUESTIONS = [
   "🚀 Tell me about Kym's top projects",
