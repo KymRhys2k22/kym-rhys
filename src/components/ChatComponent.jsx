@@ -2,8 +2,10 @@ import { useState, useRef, useEffect } from "react";
 import agentPrompt from "./agent-prompt.md?raw";
 import { CHAT_ENDPOINT, getSupabaseHeaders } from "../lib/supabaseClient";
 
-const renderFormattedText = (text) => {
-  if (!text) return null;
+const renderFormattedText = (rawText) => {
+  if (!rawText) return null;
+  // Clean any asterisks (***, **) from text to keep chat 100% natural
+  const text = rawText.replace(/\*{2,3}/g, "");
   const regex = /\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)|(https?:\/\/[^\s\)]+)/g;
   const parts = [];
   let lastIdx = 0;

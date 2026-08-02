@@ -11,8 +11,10 @@ const SUGGESTED_QUESTIONS = [
   "📫 How can I contact or hire Kym?",
 ];
 
-const renderFormattedText = (text) => {
-  if (!text) return null;
+const renderFormattedText = (rawText) => {
+  if (!rawText) return null;
+  // Clean any asterisks (***, **) from text to keep chat 100% natural
+  const text = rawText.replace(/\*{2,3}/g, "");
   const regex = /\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)|(https?:\/\/[^\s\)]+)/g;
   const parts = [];
   let lastIdx = 0;
