@@ -2,6 +2,56 @@ import { useState, useRef, useEffect } from "react";
 import agentPrompt from "./agent-prompt.md?raw";
 import { CHAT_ENDPOINT, getSupabaseHeaders } from "../lib/supabaseClient";
 
+const renderFormattedText = (text) => {
+  if (!text) return null;
+  const regex = /\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)|(https?:\/\/[^\s\)]+)/g;
+  const parts = [];
+  let lastIdx = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIdx) {
+      parts.push(text.substring(lastIdx, match.index));
+    }
+
+    if (match[1] && match[2]) {
+      const label = match[1];
+      const url = match[2];
+      parts.push(
+        <a
+          key={match.index}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-amber-600 hover:text-amber-700 underline font-medium break-all"
+        >
+          {label} ↗
+        </a>
+      );
+    } else if (match[3]) {
+      const url = match[3];
+      parts.push(
+        <a
+          key={match.index}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-amber-600 hover:text-amber-700 underline font-medium break-all"
+        >
+          {url} ↗
+        </a>
+      );
+    }
+    lastIdx = regex.lastIndex;
+  }
+
+  if (lastIdx < text.length) {
+    parts.push(text.substring(lastIdx));
+  }
+
+  return parts;
+};
+
 export default function ChatComponent() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -170,7 +220,7 @@ export default function ChatComponent() {
                       ? "bg-red-50 text-red-700 border border-red-200 rounded-bl-xs font-mono text-xs"
                       : "bg-gray-100 text-gray-800 rounded-bl-xs"
                 }`}>
-                {msg.content || (
+                {renderFormattedText(msg.content) || (
                   <span className="animate-pulse text-gray-400">
                     Thinking...
                   </span>

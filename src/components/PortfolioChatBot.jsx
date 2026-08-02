@@ -11,6 +11,56 @@ const SUGGESTED_QUESTIONS = [
   "📫 How can I contact or hire Kym?",
 ];
 
+const renderFormattedText = (text) => {
+  if (!text) return null;
+  const regex = /\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)|(https?:\/\/[^\s\)]+)/g;
+  const parts = [];
+  let lastIdx = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIdx) {
+      parts.push(text.substring(lastIdx, match.index));
+    }
+
+    if (match[1] && match[2]) {
+      const label = match[1];
+      const url = match[2];
+      parts.push(
+        <a
+          key={match.index}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-cyan-400 hover:text-cyan-300 underline font-medium break-all"
+        >
+          {label} ↗
+        </a>
+      );
+    } else if (match[3]) {
+      const url = match[3];
+      parts.push(
+        <a
+          key={match.index}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-cyan-400 hover:text-cyan-300 underline font-medium break-all"
+        >
+          {url} ↗
+        </a>
+      );
+    }
+    lastIdx = regex.lastIndex;
+  }
+
+  if (lastIdx < text.length) {
+    parts.push(text.substring(lastIdx));
+  }
+
+  return parts;
+};
+
 export default function PortfolioChatBot({ onClose }) {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
@@ -182,7 +232,7 @@ export default function PortfolioChatBot({ onClose }) {
                   : "bg-slate-800/90 text-slate-100 border border-slate-700/80 rounded-tl-xs"
               }`}
             >
-              {msg.content || (
+              {renderFormattedText(msg.content) || (
                 <span className="inline-flex items-center gap-2 text-slate-400">
                   <span className="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></span>
                   AI is thinking...
