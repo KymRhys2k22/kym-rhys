@@ -1,26 +1,27 @@
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "";
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || "";
+const supabaseUrl =
+  import.meta.env.VITE_SUPABASE_URL ||
+  "https://ngwyczzqsquzuwcehbia.supabase.co";
+const supabaseAnonKey =
+  import.meta.env.VITE_SUPABASE_ANON_KEY ||
+  "sb_publishable_qqKzPHGvtssbzFEADexIMA_rDltNS_6";
 
 /**
  * Returns the Supabase Edge Function chat endpoint URL.
  * Prefers VITE_SUPABASE_FUNCTION_URL,
- * falls back to `${VITE_SUPABASE_URL}/functions/v1/chat`,
- * or defaults to `/api/chat` for local fallback.
+ * falls back to `${supabaseUrl}/functions/v1/chat`.
  */
 export const CHAT_ENDPOINT = import.meta.env.VITE_SUPABASE_FUNCTION_URL
   ? import.meta.env.VITE_SUPABASE_FUNCTION_URL
-  : supabaseUrl && !supabaseUrl.includes("your-supabase-project")
-  ? `${supabaseUrl}/functions/v1/chat`
-  : "/api/chat";
+  : `${supabaseUrl}/functions/v1/chat`;
 
 /**
- * Headers required for invoking Supabase Edge Functions with optional anon key authorization.
+ * Headers required for invoking Supabase Edge Functions.
  */
 export const getSupabaseHeaders = () => {
   const headers = {
     "Content-Type": "application/json",
   };
-  if (supabaseAnonKey && !supabaseAnonKey.includes("your-anon-key")) {
+  if (supabaseAnonKey) {
     headers["Authorization"] = `Bearer ${supabaseAnonKey}`;
     headers["apikey"] = supabaseAnonKey;
   }
