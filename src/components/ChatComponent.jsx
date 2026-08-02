@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import agentPrompt from "./agent-prompt.md?raw";
+import { CHAT_ENDPOINT, getSupabaseHeaders } from "../lib/supabaseClient";
 
 export default function ChatComponent() {
   const [input, setInput] = useState("");
@@ -28,11 +29,9 @@ export default function ChatComponent() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch(CHAT_ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: getSupabaseHeaders(),
 
 
         body: JSON.stringify({

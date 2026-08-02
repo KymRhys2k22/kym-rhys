@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import agentPrompt from "./agent-prompt.md?raw";
+import { CHAT_ENDPOINT, getSupabaseHeaders } from "../lib/supabaseClient";
 
 const DEFAULT_MODEL = "moonshotai/kimi-k3-free";
 
@@ -42,11 +43,9 @@ export default function PortfolioChatBot({ onClose }) {
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch(CHAT_ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: getSupabaseHeaders(),
 
         body: JSON.stringify({
           model: DEFAULT_MODEL,
