@@ -6,7 +6,7 @@ export default function ChatComponent() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [model, setModel] = useState("moonshotai/kimi-k3-free");
+  const [model, setModel] = useState("deepseek/deepseek-v4-flash-0731");
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -130,6 +130,9 @@ export default function ChatComponent() {
           value={model}
           onChange={(e) => setModel(e.target.value)}
           className="text-xs bg-white border border-gray-300 rounded-lg px-3 py-1 text-gray-700 focus:outline-none focus:ring-1 focus:ring-amber-500 cursor-pointer">
+          <option value="deepseek/deepseek-v4-flash-0731">
+            deepseek/deepseek-v4-flash-0731 (Default)
+          </option>
           <option value="moonshotai/kimi-k3-free">
             moonshotai/kimi-k3-free (Free)
           </option>

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import agentPrompt from "./agent-prompt.md?raw";
 import { CHAT_ENDPOINT, getSupabaseHeaders } from "../lib/supabaseClient";
 
-const DEFAULT_MODEL = "moonshotai/kimi-k3-free";
+const DEFAULT_MODEL = "deepseek/deepseek-v4-flash-0731";
 
 const SUGGESTED_QUESTIONS = [
   "🚀 Tell me about Kym's top projects",
