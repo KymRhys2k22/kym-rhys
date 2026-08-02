@@ -117,24 +117,24 @@ export default function App() {
           <div className="flex items-center gap-4 text-sm font-medium text-slate-400">
             <a
               href="#about"
-              className="hover:text-cyan-400 transition-colors hidden md:block"
+              className="hover:text-cyan-400 transition-colors hidden sm:block"
             >
               About
             </a>
             <a
               href="#projects"
-              className="hover:text-cyan-400 transition-colors hidden md:block"
+              className="hover:text-cyan-400 transition-colors hidden sm:block"
             >
               Projects
             </a>
-
-            <button
-              onClick={() => setIsChatOpen(true)}
-              className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-xs transition-all shadow-md shadow-cyan-500/20 cursor-pointer active:scale-95 flex items-center gap-2"
+            <a
+              href="https://github.com/KymRhys2k22"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white transition-all text-xs font-mono"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              Ask AI Assistant
-            </button>
+              GitHub ↗
+            </a>
           </div>
         </div>
       </nav>
