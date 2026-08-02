@@ -16,9 +16,10 @@ Kym specializes in high-speed, modern web and mobile application development. Le
 
 ## 🛠️ Tech Stack & Capabilities
 
+- **Primary IDE & AI Assistant:** Antigravity IDE (Assisted by Gemini AI)
 - **Frontend & Mobile:** ReactJS, React Native, Next.js, Vite, Tailwind CSS, Expo
 - **Backend & Database:** Node.js, Express, Supabase (Edge Functions, DB, Auth), PostgreSQL, MongoDB Atlas, SQLite
-- **Automation & AI:** n8n workflow automation, Python, TypeScript, Google Cloud, Supabase Edge Functions (Deno), TokenRouter/OpenAI API streaming
+- **Automation & AI:** Gemini AI, Antigravity IDE, n8n workflow automation, Python, TypeScript, Google Cloud, Supabase Edge Functions (Deno), TokenRouter streaming
 - **E-Commerce & Retail Ops:** Inventory control systems, planograms, and retail workflow automation
 
 ---

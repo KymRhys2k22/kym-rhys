@@ -34,12 +34,12 @@ export default function App() {
       title: "Automation & AI",
       icon: "🤖",
       skills: [
+        "Antigravity IDE",
+        "Gemini AI",
         "n8n Workflows",
         "Python",
         "TypeScript",
         "Google Cloud",
-        "Vertex AI",
-        "Claude Code",
       ],
     },
     {
@@ -175,12 +175,12 @@ export default function App() {
               {/* Tech Pills */}
               <div className="flex flex-wrap gap-2 pt-2">
                 {[
+                  "Antigravity IDE",
+                  "Gemini AI",
                   "ReactJS",
                   "React Native",
-                  "Next.js",
                   "Node.js",
                   "Supabase",
-                  "n8n AI Workflows",
                 ].map((tech) => (
                   <span
                     key={tech}
@@ -232,6 +232,12 @@ export default function App() {
 
                 <div className="space-y-3 text-xs text-slate-300">
                   <div className="flex items-center justify-between py-1.5 border-b border-slate-800/60">
+                    <span className="text-slate-500">Main Environment</span>
+                    <span className="font-medium text-cyan-400">
+                      Antigravity IDE (Gemini AI)
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-1.5 border-b border-slate-800/60">
                     <span className="text-slate-500">Core Specialty</span>
                     <span className="font-medium text-slate-200">
                       MERN Stack & BaaS (Supabase)
@@ -246,7 +252,7 @@ export default function App() {
                   <div className="flex items-center justify-between py-1.5 border-b border-slate-800/60">
                     <span className="text-slate-500">AI Integration</span>
                     <span className="font-medium text-slate-200">
-                      n8n AI Automation, Python, Vertex AI
+                      n8n AI Automation, Python, Gemini
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-1.5">
