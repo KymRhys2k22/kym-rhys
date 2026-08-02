@@ -52,14 +52,23 @@ Deno.serve(async (req) => {
       });
     }
 
-    // Directly return streaming body from tokenrouter to client with CORS headers
-    return new Response(response.body, {
-      status: response.status,
+    // Pipe response stream through TransformStream to prevent memory accumulation in Deno
+    const { readable, writable } = new TransformStream();
+    if (response.body) {
+      response.body.pipeTo(writable).catch((err) => {
+        console.error("Stream pipe error:", err);
+      });
+    } else {
+      writable.getWriter().close();
+    }
+
+    return new Response(readable, {
+      status: 200,
       headers: {
         ...corsHeaders,
-        "Content-Type":
-          response.headers.get("content-type") || "text/event-stream",
+        "Content-Type": "text/event-stream",
         "Cache-Control": "no-cache",
+        "Connection": "keep-alive",
       },
     });
   } catch (error) {
