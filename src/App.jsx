@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PortfolioChatBot from "./components/PortfolioChatBot";
+import { SocialIcon } from "react-social-icons";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("all");
@@ -114,35 +115,56 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 text-sm font-medium text-slate-400">
+          <div className="flex items-center gap-2 text-sm font-medium text-slate-400">
             <a
               href="#about"
-              className="hover:text-cyan-400 transition-colors hidden sm:block"
+              className="hover:text-cyan-400 transition-colors hidden sm:block mr-1"
             >
               About
             </a>
             <a
               href="#projects"
-              className="hover:text-cyan-400 transition-colors hidden sm:block"
+              className="hover:text-cyan-400 transition-colors hidden sm:block mr-2"
             >
               Projects
             </a>
-            <a
-              href="https://www.linkedin.com/in/kymrhys/"
+            <SocialIcon
+              url="https://github.com/KymRhys2k22"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all text-xs font-mono"
-            >
-              LinkedIn ↗
-            </a>
-            <a
-              href="https://m.me/kymrhys"
+              style={{ height: 32, width: 32 }}
+              bgColor="#1e293b"
+              fgColor="#f8fafc"
+              className="hover:scale-110 transition-transform"
+            />
+            <SocialIcon
+              url="https://www.linkedin.com/in/kymrhys/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2.5 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 text-blue-300 hover:text-blue-200 transition-all text-xs font-mono"
-            >
-              Messenger ↗
-            </a>
+              style={{ height: 32, width: 32 }}
+              bgColor="#1e293b"
+              fgColor="#38bdf8"
+              className="hover:scale-110 transition-transform"
+            />
+            <SocialIcon
+              url="https://www.facebook.com/kymrhys"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ height: 32, width: 32 }}
+              bgColor="#1e293b"
+              fgColor="#60a5fa"
+              className="hover:scale-110 transition-transform"
+            />
+            <SocialIcon
+              network="messenger"
+              url="https://m.me/kymrhys"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ height: 32, width: 32 }}
+              bgColor="#0084ff"
+              fgColor="#ffffff"
+              className="hover:scale-110 transition-transform"
+            />
           </div>
         </div>
       </nav>
@@ -271,31 +293,39 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-slate-800 flex items-center justify-between gap-2">
-                  <a
-                    href="https://m.me/kymrhys"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs text-center transition-all shadow-md shadow-blue-500/20"
-                  >
-                    💬 Messenger
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/kymrhys/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs text-center transition-all border border-slate-700"
-                  >
-                    💼 LinkedIn
-                  </a>
-                  <a
-                    href="https://www.facebook.com/kymrhys"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs text-center transition-all border border-slate-700"
-                  >
-                    📘 FB
-                  </a>
+                <div className="pt-3 border-t border-slate-800 flex items-center justify-between gap-2">
+                  <span className="text-xs font-mono text-slate-400">Connect:</span>
+                  <div className="flex items-center gap-2">
+                    <SocialIcon
+                      url="https://github.com/KymRhys2k22"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ height: 34, width: 34 }}
+                      className="hover:scale-110 transition-transform"
+                    />
+                    <SocialIcon
+                      url="https://www.linkedin.com/in/kymrhys/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ height: 34, width: 34 }}
+                      className="hover:scale-110 transition-transform"
+                    />
+                    <SocialIcon
+                      url="https://www.facebook.com/kymrhys"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ height: 34, width: 34 }}
+                      className="hover:scale-110 transition-transform"
+                    />
+                    <SocialIcon
+                      network="messenger"
+                      url="https://m.me/kymrhys"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ height: 34, width: 34 }}
+                      className="hover:scale-110 transition-transform"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -424,7 +454,38 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800/80 mt-20 py-8 bg-slate-950/90 text-center text-xs text-slate-500 space-y-2">
+      <footer className="border-t border-slate-800/80 mt-20 py-8 bg-slate-950/90 text-center text-xs text-slate-500 space-y-4">
+        <div className="flex justify-center items-center gap-3">
+          <SocialIcon
+            url="https://github.com/KymRhys2k22"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ height: 32, width: 32 }}
+            className="hover:scale-110 transition-transform opacity-80 hover:opacity-100"
+          />
+          <SocialIcon
+            url="https://www.linkedin.com/in/kymrhys/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ height: 32, width: 32 }}
+            className="hover:scale-110 transition-transform opacity-80 hover:opacity-100"
+          />
+          <SocialIcon
+            url="https://www.facebook.com/kymrhys"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ height: 32, width: 32 }}
+            className="hover:scale-110 transition-transform opacity-80 hover:opacity-100"
+          />
+          <SocialIcon
+            network="messenger"
+            url="https://m.me/kymrhys"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ height: 32, width: 32 }}
+            className="hover:scale-110 transition-transform opacity-80 hover:opacity-100"
+          />
+        </div>
         <p>
           © 2026 Kym Rhys Pluma Mallari. Built with React, Tailwind CSS &
           Supabase.
