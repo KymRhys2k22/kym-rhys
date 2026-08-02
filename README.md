@@ -80,5 +80,8 @@ npm run build
 
 ## 📬 Contact & Connect
 
-- **GitHub:** [@KymRhys2k22](https://github.com/KymRhys2k22)
-- **Portfolio Website:** [Live Portfolio](https://kym-rhys.vercel.app) _(or updated deployment URL)_
+- **💼 LinkedIn:** [linkedin.com/in/kymrhys](https://www.linkedin.com/in/kymrhys/)
+- **💬 Messenger:** [m.me/kymrhys](https://m.me/kymrhys)
+- **📘 Facebook:** [facebook.com/kymrhys](https://www.facebook.com/kymrhys)
+- **🐙 GitHub:** [@KymRhys2k22](https://github.com/KymRhys2k22)
+- **🌐 Portfolio:** [kym-rhys.vercel.app](https://kym-rhys.vercel.app)

@@ -114,7 +114,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4 text-sm font-medium text-slate-400">
+          <div className="flex items-center gap-3 text-sm font-medium text-slate-400">
             <a
               href="#about"
               className="hover:text-cyan-400 transition-colors hidden sm:block"
@@ -128,12 +128,20 @@ export default function App() {
               Projects
             </a>
             <a
-              href="https://github.com/KymRhys2k22"
+              href="https://www.linkedin.com/in/kymrhys/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white transition-all text-xs font-mono"
+              className="px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-all text-xs font-mono"
             >
-              GitHub ↗
+              LinkedIn ↗
+            </a>
+            <a
+              href="https://m.me/kymrhys"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-2.5 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 text-blue-300 hover:text-blue-200 transition-all text-xs font-mono"
+            >
+              Messenger ↗
             </a>
           </div>
         </div>
@@ -261,6 +269,33 @@ export default function App() {
                       AI-assisted Vibecoding Workflows
                     </span>
                   </div>
+                </div>
+
+                <div className="pt-2 border-t border-slate-800 flex items-center justify-between gap-2">
+                  <a
+                    href="https://m.me/kymrhys"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs text-center transition-all shadow-md shadow-blue-500/20"
+                  >
+                    💬 Messenger
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/kymrhys/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs text-center transition-all border border-slate-700"
+                  >
+                    💼 LinkedIn
+                  </a>
+                  <a
+                    href="https://www.facebook.com/kymrhys"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs text-center transition-all border border-slate-700"
+                  >
+                    📘 FB
+                  </a>
                 </div>
               </div>
             </div>
