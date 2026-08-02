@@ -6,11 +6,12 @@ Welcome to the official repository of **Kym Rhys**, a Full-Stack Software Develo
 
 ## 🌟 About Kym
 
-Kym specializes in high-speed, modern web and mobile application development. Leveraging the **MERN stack**, **Supabase**, and **Agentic AI workflows**, Kym builds pragmatic, scalable, and high-performance applications.
+Kym is a self-driven, impact-first **Full-Stack Software Engineer** who took an unconventional path into software development. Entirely self-taught through self-directed learning on Coursera and hands-on building, Kym brings extreme initiative, rapid adaptability, and a passion for shipping working products.
 
 - 📍 **Location:** San Pedro, Laguna, Philippines
-- 💼 **Specialization:** Full-Stack Web Development, Mobile Apps, Automation & AI Integration
-- ⚡ **Approach:** Rapid prototyping and delivery using BaaS & AI-assisted development workflows
+- 🎓 **Engineering Path:** Self-Taught Engineer (Coursera & Hands-On Building)
+- 💼 **Specialization:** Full-Stack Web Development, Mobile Apps, Automation & AI Workflows
+- ⚡ **Approach:** Turning complex workflows into clean, user-friendly digital products using MERN, Next.js, Supabase, and agentic AI tools
 
 ---
 

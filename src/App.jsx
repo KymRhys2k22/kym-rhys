@@ -187,9 +187,11 @@ export default function App() {
                 <strong className="text-slate-200">
                   Kym Rhys Pluma Mallari
                 </strong>
-                . I build pragmatic digital solutions combining modern frontend
-                frameworks, BaaS platforms like Supabase, and automated AI
-                workflows.
+                . I am a self-driven, impact-first Full-Stack Software Engineer
+                who took an unconventional path into tech. Entirely self-taught
+                through rigorous programs on Coursera and hands-on building, I
+                focus on building scalable web & mobile applications that turn
+                complex workflows into clean, user-friendly digital products.
               </p>
 
               {/* Tech Pills */}
@@ -251,6 +253,12 @@ export default function App() {
                 </div>
 
                 <div className="space-y-3 text-xs text-slate-300">
+                  <div className="flex items-center justify-between py-1.5 border-b border-slate-800/60">
+                    <span className="text-slate-500">Engineering Path</span>
+                    <span className="font-medium text-emerald-400">
+                      Self-Taught (Coursera & Shipping)
+                    </span>
+                  </div>
                   <div className="flex items-center justify-between py-1.5 border-b border-slate-800/60">
                     <span className="text-slate-500">Main Environment</span>
                     <span className="font-medium text-cyan-400">
