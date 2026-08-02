@@ -155,16 +155,6 @@ export default function App() {
               fgColor="#60a5fa"
               className="hover:scale-110 transition-transform"
             />
-            <SocialIcon
-              network="messenger"
-              url="https://m.me/kymrhys"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ height: 32, width: 32 }}
-              bgColor="#0084ff"
-              fgColor="#ffffff"
-              className="hover:scale-110 transition-transform"
-            />
           </div>
         </div>
       </nav>
@@ -317,14 +307,6 @@ export default function App() {
                       style={{ height: 34, width: 34 }}
                       className="hover:scale-110 transition-transform"
                     />
-                    <SocialIcon
-                      network="messenger"
-                      url="https://m.me/kymrhys"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ height: 34, width: 34 }}
-                      className="hover:scale-110 transition-transform"
-                    />
                   </div>
                 </div>
               </div>
@@ -472,14 +454,6 @@ export default function App() {
           />
           <SocialIcon
             url="https://www.facebook.com/kymrhys"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ height: 32, width: 32 }}
-            className="hover:scale-110 transition-transform opacity-80 hover:opacity-100"
-          />
-          <SocialIcon
-            network="messenger"
-            url="https://m.me/kymrhys"
             target="_blank"
             rel="noopener noreferrer"
             style={{ height: 32, width: 32 }}
