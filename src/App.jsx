@@ -268,10 +268,10 @@ export default function App() {
                   <RotatingText
                     prefix=""
                     texts={[
-                      "Mobile 📱 Apps",
-                      "Web 🕸️ Applications",
-                      "AI 🤖 Workflows",
-                      "UI/UX 🖼️ Designs",
+                      "Mobile \u00A0\u00A0\u00A0\u00A0📱Application",
+                      "Web \u00A0\u00A0\u00A0\u00A0🕸️Applications",
+                      "AI \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0🤖Workflows",
+                      "UI/UX \u00A0\u00A0\u00A0\u00A0🖼️Designs",
                     ]}
                     color="#38bdf8"
                     badgeBackground="transparent"

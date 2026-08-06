@@ -347,7 +347,7 @@ export default function RotatingText({
           {elements.map((wordObj, wordIndex) => (
             <span
               key={`${currentTextIndex}-${wordIndex}`}
-              style={{ display: "inline-flex" }}
+              style={{ display: "inline-flex", whiteSpace: "pre" }}
             >
               {wordObj.characters.map((char, charIndex) => (
                 <span
@@ -356,13 +356,14 @@ export default function RotatingText({
                   style={{
                     display: "inline-block",
                     willChange: "transform, opacity",
+                    whiteSpace: "pre",
                   }}
                 >
                   {char === " " ? "\u00A0" : char}
                 </span>
               ))}
               {wordObj.needsSpace ? (
-                <span style={{ whiteSpace: "pre" }}> </span>
+                <span style={{ whiteSpace: "pre" }}>{"\u00A0"}</span>
               ) : null}
             </span>
           ))}
