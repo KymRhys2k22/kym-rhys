@@ -271,7 +271,7 @@ export default function App() {
                       "Mobile \u00A0\u00A0\u00A0\u00A0📱Application",
                       "Web \u00A0\u00A0\u00A0\u00A0🕸️Applications",
                       "AI \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0🤖Workflows",
-                      "UI/UX \u00A0\u00A0\u00A0\u00A0🖼️Designs",
+                      "UI / UX \u00A0\u00A0\u00A0\u00A0🖼️Designs",
                     ]}
                     color="#38bdf8"
                     badgeBackground="transparent"
