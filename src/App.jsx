@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import PortfolioChatBot from "./components/PortfolioChatBot";
 import { SocialIcon } from "react-social-icons";
+import MagneticButton from "./components/originkit/ui/magnetic-hover-button";
+import RotatingText from "./components/originkit/ui/text-carousel";
+import UserCursor from "./components/originkit/ui/usercursor";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("all");
@@ -170,6 +173,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 relative">
+      <UserCursor name="Client" color="#0284c7" textColor="#ffffff" />
       {/* Navbar */}
       <nav className="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -258,12 +262,26 @@ export default function App() {
                 </div>
               </a>
 
-              <h1 className="text-4xl sm:text-6xl font-black text-slate-100 tracking-tight leading-tight">
-                Crafting Scalable{" "}
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
-                  Web & Mobile
-                </span>{" "}
-                Applications
+              <h1 className="text-4xl sm:text-6xl font-black text-slate-100 tracking-tight leading-tight flex flex-col items-start gap-2">
+                <span className="whitespace-nowrap">Building Modern</span>
+                <div className="my-1 inline-flex items-center whitespace-nowrap overflow-hidden max-w-full">
+                  <RotatingText
+                    prefix=""
+                    texts={[
+                      "Mobile 📱 Apps",
+                      "Web 🕸️ Applications",
+                      "AI 🤖 Workflows",
+                      "UI/UX 🖼️ Designs",
+                    ]}
+                    color="#38bdf8"
+                    badgeBackground="transparent"
+                    badgeBorder="none"
+                    badgePaddingX={0}
+                    badgePaddingY={0}
+                    splitBy="words"
+                    staggerFrom="first"
+                  />
+                </div>
               </h1>
 
               <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
@@ -298,11 +316,19 @@ export default function App() {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 pt-4">
-                <button
+                <MagneticButton
+                  label="🤖 Chat with AI Portfolio Assistant"
                   onClick={() => setIsChatOpen(true)}
-                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-sm shadow-xl shadow-cyan-500/25 transition-all active:scale-95 cursor-pointer flex items-center gap-2">
-                  🤖 Chat with AI Portfolio Assistant
-                </button>
+                  fill="linear-gradient(to right, #06b6d4, #2563eb)"
+                  textColor="#ffffff"
+                  sweepColor="#0284c7"
+                  sweepTextColor="#ffffff"
+                  radius={12}
+                  paddingX={24}
+                  paddingY={14}
+                  font={{ fontWeight: 600, fontSize: 14 }}
+                  border={false}
+                />
                 <a
                   href="#projects"
                   className="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold text-sm transition-all active:scale-95">

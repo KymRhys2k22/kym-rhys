@@ -32,3 +32,4 @@ dist
 bin/
 supabase/.temp/
 
+.originkit/

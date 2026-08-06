@@ -15,7 +15,7 @@ const renderFormattedText = (rawText) => {
   if (!rawText) return null;
   // Clean any asterisks (***, **) from text to keep chat 100% natural
   const text = rawText.replace(/\*{2,3}/g, "");
-  const regex = /\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)|(https?:\/\/[^\s\)]+)/g;
+  const regex = /\[([^\]]+)\]\((https?:\/\/[^\s\)]+|#[^\s\)]+)\)|(https?:\/\/[^\s\)]+)/g;
   const parts = [];
   let lastIdx = 0;
   let match;
@@ -28,15 +28,27 @@ const renderFormattedText = (rawText) => {
     if (match[1] && match[2]) {
       const label = match[1];
       const url = match[2];
+      const isHash = url.startsWith("#");
       parts.push(
         <a
           key={match.index}
           href={url}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={isHash ? "_self" : "_blank"}
+          rel={isHash ? undefined : "noopener noreferrer"}
+          onClick={
+            isHash
+              ? (e) => {
+                  e.preventDefault();
+                  const targetEl = document.querySelector(url);
+                  if (targetEl) {
+                    targetEl.scrollIntoView({ behavior: "smooth" });
+                  }
+                }
+              : undefined
+          }
           className="text-cyan-400 hover:text-cyan-300 underline font-medium break-all"
         >
-          {label} ↗
+          {label} {isHash ? "↓" : "↗"}
         </a>
       );
     } else if (match[3]) {
@@ -116,11 +128,17 @@ export default function PortfolioChatBot({ onClose }) {
       });
 
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        const errorMessage =
-          errorData?.error?.message ||
-          errorData?.message ||
-          `HTTP ${response.status}: ${response.statusText}`;
+        const errorText = await response.text().catch(() => "");
+        let errorMessage = `HTTP ${response.status}: ${response.statusText}`;
+        try {
+          const errorData = JSON.parse(errorText);
+          errorMessage =
+            errorData?.error?.message ||
+            errorData?.message ||
+            errorMessage;
+        } catch (e) {
+          if (errorText) errorMessage = errorText;
+        }
         throw new Error(errorMessage);
       }
 
@@ -165,11 +183,14 @@ export default function PortfolioChatBot({ onClose }) {
       }
     } catch (err) {
       console.error("Chat Error:", err);
+      const friendlyMessage =
+        "🤖 AI chat is not available right now. However, feel free to contact Kym directly or explore his projects and certificates!\n\n📬 Contact Kym Directly:\n• [LinkedIn Profile](https://www.linkedin.com/in/kymrhys/)\n• [Messenger](https://m.me/kymrhys)\n• [Facebook Page](https://www.facebook.com/kymrhys)\n• [GitHub Profile](https://github.com/KymRhys2k22)\n\n🚀 Explore Portfolio:\n• View [Featured Projects](#projects)\n• View [Verified Certificates](#certificates)";
+
       setMessages((prev) => {
         const next = [...prev];
         next[next.length - 1] = {
           role: "assistant",
-          content: `⚠️ Failed to respond: ${err.message}`,
+          content: friendlyMessage,
           isError: true,
         };
         return next;
@@ -230,7 +251,7 @@ export default function PortfolioChatBot({ onClose }) {
                 msg.role === "user"
                   ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-tr-xs"
                   : msg.isError
-                  ? "bg-red-950/80 border border-red-800 text-red-200 rounded-tl-xs font-mono text-xs"
+                  ? "bg-slate-800/95 text-slate-100 border border-cyan-500/40 rounded-tl-xs shadow-lg"
                   : "bg-slate-800/90 text-slate-100 border border-slate-700/80 rounded-tl-xs"
               }`}
             >

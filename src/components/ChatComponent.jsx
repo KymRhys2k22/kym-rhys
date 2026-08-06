@@ -6,7 +6,7 @@ const renderFormattedText = (rawText) => {
   if (!rawText) return null;
   // Clean any asterisks (***, **) from text to keep chat 100% natural
   const text = rawText.replace(/\*{2,3}/g, "");
-  const regex = /\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)|(https?:\/\/[^\s\)]+)/g;
+  const regex = /\[([^\]]+)\]\((https?:\/\/[^\s\)]+|#[^\s\)]+)\)|(https?:\/\/[^\s\)]+)/g;
   const parts = [];
   let lastIdx = 0;
   let match;
@@ -19,15 +19,27 @@ const renderFormattedText = (rawText) => {
     if (match[1] && match[2]) {
       const label = match[1];
       const url = match[2];
+      const isHash = url.startsWith("#");
       parts.push(
         <a
           key={match.index}
           href={url}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={isHash ? "_self" : "_blank"}
+          rel={isHash ? undefined : "noopener noreferrer"}
+          onClick={
+            isHash
+              ? (e) => {
+                  e.preventDefault();
+                  const targetEl = document.querySelector(url);
+                  if (targetEl) {
+                    targetEl.scrollIntoView({ behavior: "smooth" });
+                  }
+                }
+              : undefined
+          }
           className="text-amber-600 hover:text-amber-700 underline font-medium break-all"
         >
-          {label} ↗
+          {label} {isHash ? "↓" : "↗"}
         </a>
       );
     } else if (match[3]) {
@@ -156,12 +168,14 @@ export default function ChatComponent() {
       }
     } catch (error) {
       console.error("Error fetching chat completion:", error);
+      const friendlyMessage =
+        "🤖 AI chat is not available right now. However, feel free to contact Kym directly or explore his projects and certificates!\n\n📬 Contact Kym Directly:\n• [LinkedIn Profile](https://www.linkedin.com/in/kymrhys/)\n• [Messenger](https://m.me/kymrhys)\n• [Facebook Page](https://www.facebook.com/kymrhys)\n• [GitHub Profile](https://github.com/KymRhys2k22)\n\n🚀 Explore Portfolio:\n• View [Featured Projects](#projects)\n• View [Verified Certificates](#certificates)";
 
       setMessages((prev) => {
         const updated = [...prev];
         updated[updated.length - 1] = {
           role: "assistant",
-          content: `⚠️ Error: ${error.message}`,
+          content: friendlyMessage,
           isError: true,
         };
         return updated;
