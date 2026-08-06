@@ -243,7 +243,7 @@ export default function App() {
       </nav>
 
       {/* Main Content Container */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  space-y-20">
         {/* Hero Section */}
         <section id="about" className="relative pt-6">
           {/* Background Glow */}
@@ -268,18 +268,17 @@ export default function App() {
                   <RotatingText
                     prefix=""
                     texts={[
-                      "Mobile \u00A0\u00A0\u00A0\u00A0📱Application",
-                      "Web \u00A0\u00A0\u00A0\u00A0🕸️Applications",
-                      "AI \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0🤖Workflows",
-                      "UI / UX \u00A0\u00A0\u00A0\u00A0🖼️Designs",
+                      "Mobile Applications",
+                      "Web Applications",
+                      "AI Workflows",
+                      "UI/UX Designs",
                     ]}
                     color="#38bdf8"
                     badgeBackground="transparent"
                     badgeBorder="none"
                     badgePaddingX={0}
                     badgePaddingY={0}
-                    splitBy="words"
-                    staggerFrom="first"
+                    font={{ fontSize: "1.1em" }}
                   />
                 </div>
               </h1>
