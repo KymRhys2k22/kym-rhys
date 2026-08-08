@@ -267,13 +267,26 @@ export default function App() {
                 <div className="my-1 inline-flex items-center whitespace-nowrap overflow-hidden max-w-full">
                   <RotatingText
                     prefix=""
+                    texts={["Mobile ", "Web ", "AI ", "UI/UX "]}
+                    color="#38bdf8"
+                    transition={{ duration: 1 }}
+                    badgeBackground="transparent"
+                    badgeBorder="none"
+                    badgePaddingX={0}
+                    badgePaddingY={0}
+                    font={{ fontSize: "1.1em" }}
+                  />
+                  <br />
+                  <RotatingText
+                    prefix=""
                     texts={[
-                      "Mobile Applications",
-                      "Web Applications",
-                      "AI Workflows",
-                      "UI/UX Designs",
+                      "Applications",
+                      "Applications",
+                      "Workflows",
+                      "Designs",
                     ]}
                     color="#38bdf8"
+                    transition={{ duration: 1 }}
                     badgeBackground="transparent"
                     badgeBorder="none"
                     badgePaddingX={0}
